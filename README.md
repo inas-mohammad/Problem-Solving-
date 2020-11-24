@@ -95,4 +95,31 @@ return true;
 
 
 console.log('Problem Solving Q: 5 ');
+function FindIntersection(strArr){
+  let firstString = strArr[0]
+  let secondString = strArr[1]
+  let firstElementArray = []
+  let secondElementArray = []
+ 
+  firstString.split(',').map((oneNumber) => {
+    firstElementArray.push(Number(oneNumber))
+  })
+  secondString.split(',').map((oneNumber) => {
+    secondElementArray.push(Number(oneNumber))
+  })
+
+  
+  let myAnswer = (secondElementArray.filter(e =>firstElementArray.includes(e))).toString()
+  
+  
+  if(!myAnswer){
+    return "false"
+  } else  {
+    return myAnswer; 
+  }
+}
+ 
+document.getElementById("displayAnswer").innerHTML = FindIntersection(strArr);
+function findIntersection(strArr) {
+
 
